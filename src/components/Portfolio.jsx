@@ -45,8 +45,8 @@ const projects = [
     title: "Portfolio Website",
     description: "Personal Portfolio built with React and Tailwind CSS",
     links: {
-      site: "#",
-      github: "#",
+      site: "https://portfolio-indol-seven-75.vercel.app/",
+      github: "https://github.com/Amarsah15/Portfolio",
     },
   },
   {
