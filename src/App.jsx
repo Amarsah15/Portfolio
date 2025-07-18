@@ -9,8 +9,13 @@ import { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
-    // Set the zoom level to 110% when the component mounts
-    document.body.style.zoom = "110%";
+    const laptopBreakpoint = 1024;
+
+    if (window.innerWidth >= laptopBreakpoint) {
+      document.body.style.zoom = "110%";
+    } else {
+      document.body.style.zoom = "100%";
+    }
   }, []);
   return (
     <>
