@@ -139,15 +139,19 @@ const Hero = () => {
         transition={{ duration: 1, delay: 2 }}
         className="flex flex-row text-4xl px-12 md:px-0 w-full justify-center items-center pb-20 pt-10 mt-10"
       >
-        <p className="text-gray-200 mr-6">My Tech Stack</p>
-        <DiHtml5 className="mx-2 text-red-600" />
-        <DiCss3 className="mx-2  text-blue-600" />
-        <DiJavascript1 className="mx-2  text-yellow-600" />
-        <DiReact className="mx-2 text-teal-400" />
-        <DiNodejsSmall className="mx-2  text-green-600" />
-        <DiMysql className="mx-2  text-blue-400" />
-        <DiMongodb className="mx-2  text-green-600" />
-        <SiExpress className="mx-2  text-gray-600" />
+        <div className="flex flex-wrap justify-center items-center py-4">
+          <p className="text-gray-200 mr-4 mb-2 text-2xl">My Tech Stack</p>
+          <div className="flex flex-wrap justify-center">
+            <DiHtml5 className="mx-2 my-1 text-red-600 text-4xl" />
+            <DiCss3 className="mx-2 my-1 text-blue-600 text-4xl" />
+            <DiJavascript1 className="mx-2 my-1 text-yellow-600 text-4xl" />
+            <DiReact className="mx-2 my-1 text-teal-400 text-4xl" />
+            <DiNodejsSmall className="mx-2 my-1 text-green-600 text-4xl" />
+            <DiMysql className="mx-2 my-1 text-blue-400 text-4xl" />
+            <DiMongodb className="mx-2 my-1 text-green-600 text-4xl" />
+            <SiExpress className="mx-2 my-1 text-gray-600 text-4xl" />
+          </div>
+        </div>
       </motion.div>
 
       <div className="absolute insert-0 hidden md:block">
