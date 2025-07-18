@@ -82,8 +82,8 @@ const Hero = () => {
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-sky-500 rounded-xl"
             >
               <a
-                href="#"
-                download="#"
+                href="./public/Amarnath_Kumar.pdf"
+                download="Amarnath_Kumar.pdf"
                 className="flex items-center"
                 target="_blank"
               >
