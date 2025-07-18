@@ -10,7 +10,7 @@ import { useEffect } from "react";
 export default function App() {
   useEffect(() => {
     // Set the zoom level to 110% when the component mounts
-    document.body.style.zoom = "100%";
+    document.body.style.zoom = "110%";
   }, []);
   return (
     <>
