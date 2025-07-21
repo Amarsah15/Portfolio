@@ -17,6 +17,24 @@ export default function App() {
       document.body.style.zoom = "100%";
     }
   }, []);
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.substring(1);
+
+      const element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 100);
+      }
+    }
+  }, []);
+
   return (
     <>
       <Navbar />
