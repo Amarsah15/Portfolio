@@ -85,7 +85,6 @@ const Hero = () => {
                 href="./Amarnath_Kumar.pdf"
                 download="Amarnath_Kumar.pdf"
                 className="flex items-center"
-                target="_blank"
               >
                 Download CV
               </a>
