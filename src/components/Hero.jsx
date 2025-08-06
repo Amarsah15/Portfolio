@@ -6,7 +6,6 @@ import {
   DiHtml5,
   DiNodejsSmall,
   DiReact,
-  DiMysql,
   DiJavascript1,
   DiMongodb,
 } from "react-icons/di";
@@ -146,7 +145,6 @@ const Hero = () => {
             <DiJavascript1 className="mx-2 my-1 text-yellow-600 text-4xl" />
             <DiReact className="mx-2 my-1 text-teal-400 text-4xl" />
             <DiNodejsSmall className="mx-2 my-1 text-green-600 text-4xl" />
-            <DiMysql className="mx-2 my-1 text-blue-400 text-4xl" />
             <DiMongodb className="mx-2 my-1 text-green-600 text-4xl" />
             <SiExpress className="mx-2 my-1 text-gray-600 text-4xl" />
           </div>

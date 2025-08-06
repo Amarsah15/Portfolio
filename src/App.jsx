@@ -9,16 +9,6 @@ import { useEffect } from "react";
 
 export default function App() {
   useEffect(() => {
-    const laptopBreakpoint = 1024;
-
-    if (window.innerWidth >= laptopBreakpoint) {
-      document.body.style.zoom = "110%";
-    } else {
-      document.body.style.zoom = "100%";
-    }
-  }, []);
-
-  useEffect(() => {
     if (window.location.hash) {
       const id = window.location.hash.substring(1);
 
