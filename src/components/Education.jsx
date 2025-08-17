@@ -15,7 +15,7 @@ const education = [
   },
   {
     name: "Kendriya Vidyalaya Sevoke Road",
-    class: "Senior Secondary",
+    class: "Secondary School",
     year: "2019",
     percentage: "81.4%",
   },
