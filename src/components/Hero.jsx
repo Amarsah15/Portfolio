@@ -18,6 +18,21 @@ import ShinyEffect from "./ShinyEffect";
 import { SiExpress } from "react-icons/si";
 
 const Hero = () => {
+  const handleMailClick = (e) => {
+    e.preventDefault();
+
+    const email = "amarnath.kumar152003@gmail.com";
+
+    const mailtoLink = `mailto:${email}`;
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+
+    window.location.href = mailtoLink;
+
+    setTimeout(() => {
+      window.open(gmailLink, "_blank");
+    }, 1000);
+  };
+
   return (
     <div className="mt-24 max-w-[1200px] mx-auto relative" id="hero">
       <div className="grid md:grid-cols-2 place-items-center gap-8">
@@ -102,16 +117,15 @@ const Hero = () => {
               <motion.a
                 target="_blank"
                 whileHover={{ scale: 1.2 }}
-                href="https://www.linkedin.com/in/amarnath-kumar-12a48a260"
+                href="https://www.linkedin.com/in/amarnath15"
                 className="  text-gray-300"
               >
                 <AiOutlineLinkedin />
               </motion.a>
 
               <motion.a
-                target="_blank"
                 whileHover={{ scale: 1.2 }}
-                href="mailto:gsah150803@gmail.com"
+                onClick={handleMailClick}
                 className="  text-gray-300"
               >
                 <AiOutlineMail />
