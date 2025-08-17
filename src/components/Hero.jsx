@@ -104,7 +104,7 @@ const Hero = () => {
               </a>
             </motion.button>
 
-            <div className="flex gap-6 flex-row text-4xl md:text-sky-500 z-20">
+            <div className="flex cursor-pointer gap-6 flex-row text-4xl md:text-sky-500 z-20">
               <motion.a
                 target="_blank"
                 whileHover={{ scale: 1.2 }}
@@ -118,7 +118,7 @@ const Hero = () => {
                 target="_blank"
                 whileHover={{ scale: 1.2 }}
                 href="https://www.linkedin.com/in/amarnath15"
-                className="  text-gray-300"
+                className="text-gray-300"
               >
                 <AiOutlineLinkedin />
               </motion.a>
@@ -126,7 +126,7 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.2 }}
                 onClick={handleMailClick}
-                className="  text-gray-300"
+                className="text-gray-300"
               >
                 <AiOutlineMail />
               </motion.a>
