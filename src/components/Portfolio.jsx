@@ -32,7 +32,7 @@ const projects = [
   },
   {
     img: project2,
-    title: "Landing Page",
+    title: "ChaiCode Landing Page",
     description:
       "Comprehensive and responsive landing page. Built using HTML, CSS, Tailwind CSS, and JavaScript.",
     links: {
