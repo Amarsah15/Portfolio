@@ -4,7 +4,7 @@ A **personal portfolio website** built using **React.js** and **Tailwind CSS** t
 
 # Demo
 
-You can view the live demo of the Weather App [here](https://portfolio-indol-seven-75.vercel.app/).
+You can view the live demo [here](https://portfolio-indol-seven-75.vercel.app/).
 
 ## 🚀 Features
 
