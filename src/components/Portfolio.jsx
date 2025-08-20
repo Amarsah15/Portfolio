@@ -37,7 +37,7 @@ const projects = [
       "Comprehensive and responsive landing page. Built using HTML, CSS, Tailwind CSS, and JavaScript.",
     links: {
       site: "https://chai-code-alpha.vercel.app/",
-      github: "https://github.com/Amarsah15/chai_code_landing_page",
+      github: "https://github.com/Amarsah15/Chai-Code",
     },
   },
 
