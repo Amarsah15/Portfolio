@@ -21,6 +21,16 @@ const projects = [
     },
   },
   {
+    img: project8,
+    title: "StudyNotion",
+    description:
+      "StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content.",
+    links: {
+      site: "https://website-is-coming-soon.vercel.app/",
+      github: "https://github.com/Amarsah15/StudyNotion",
+    },
+  },
+  {
     img: project5,
     title: "Weather App",
     description:
@@ -31,26 +41,6 @@ const projects = [
     },
   },
   {
-    img: project2,
-    title: "ChaiCode Landing Page",
-    description:
-      "Comprehensive and responsive landing page. Built using HTML, CSS, Tailwind CSS, and JavaScript.",
-    links: {
-      site: "https://chai-code-alpha.vercel.app/",
-      github: "https://github.com/Amarsah15/Chai-Code",
-    },
-  },
-
-  {
-    img: project4,
-    title: "Portfolio Website",
-    description: "Personal Portfolio built with React and Tailwind CSS",
-    links: {
-      site: "https://portfolio-indol-seven-75.vercel.app/",
-      github: "https://github.com/Amarsah15/Portfolio",
-    },
-  },
-  {
     img: project3,
     title: "Tic-Tac-Toe",
     description:
@@ -58,6 +48,16 @@ const projects = [
     links: {
       site: "https://tic-tac-toe-three-lac-50.vercel.app/",
       github: "https://github.com/Amarsah15/TIc-Tac-Toe",
+    },
+  },
+  {
+    img: project2,
+    title: "ChaiCode Landing Page",
+    description:
+      "Comprehensive and responsive landing page. Built using HTML, CSS, Tailwind CSS, and JavaScript.",
+    links: {
+      site: "https://chai-code-alpha.vercel.app/",
+      github: "https://github.com/Amarsah15/Chai-Code",
     },
   },
   {
@@ -81,13 +81,12 @@ const projects = [
     },
   },
   {
-    img: project8,
-    title: "StudyNotion",
-    description:
-      "StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content.",
+    img: project4,
+    title: "Portfolio Website",
+    description: "Personal Portfolio built with React and Tailwind CSS",
     links: {
-      site: "https://website-is-coming-soon.vercel.app/",
-      github: "https://github.com/Amarsah15/StudyNotion",
+      site: "https://portfolio-indol-seven-75.vercel.app/",
+      github: "https://github.com/Amarsah15/Portfolio",
     },
   },
 ];
