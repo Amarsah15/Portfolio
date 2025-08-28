@@ -1,7 +1,6 @@
 import project1 from "../assets/proj1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/proj5.png";
-import project4 from "../assets/proj.png";
 import project5 from "../assets/proj3.png";
 import project6 from "../assets/proj6.png";
 import project7 from "../assets/proj7.png";
@@ -78,15 +77,6 @@ const projects = [
     links: {
       site: "https://password-generator-zeta-green.vercel.app/",
       github: "https://github.com/Amarsah15/Password-Generator/",
-    },
-  },
-  {
-    img: project4,
-    title: "Portfolio Website",
-    description: "Personal Portfolio built with React and Tailwind CSS",
-    links: {
-      site: "https://portfolio-indol-seven-75.vercel.app/",
-      github: "https://github.com/Amarsah15/Portfolio",
     },
   },
 ];
