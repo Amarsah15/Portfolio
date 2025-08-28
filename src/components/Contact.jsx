@@ -42,7 +42,7 @@ const Contact = () => {
               id="name"
               placeholder="Your Name ..."
               name="name"
-              className="mb-2 w-full rounded-md border border-sky-500 py-2 pl-2 pr-4 bg-slate-600/20 text-white" 
+              className="mb-2 w-full rounded-md border border-sky-500 py-2 pl-2 pr-4 bg-slate-600/20 text-white"
             />
             <input
               type="email"
