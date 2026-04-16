@@ -21,12 +21,12 @@ const projects = [
   },
   {
     img: project8,
-    title: "StudyNotion",
+    title: "AuthCore",
     description:
-      "StudyNotion is a fully functional ed-tech platform that enables users to create, consume, and rate educational content.",
+      "AuthCore is a secure authentication app built with a React frontend and Node.js, Express, and MongoDB backend. It is designed around modern auth flows: registration with email verification, password and OTP login, reset-password flows, protected sessions, and device visibility.",
     links: {
-      site: "https://website-is-coming-soon.vercel.app/",
-      github: "https://github.com/Amarsah15/StudyNotion",
+      site: "https://authcore-rose.vercel.app",
+      github: "https://github.com/Amarsah15/AuthCore",
     },
   },
   {
