@@ -10,17 +10,34 @@ export default function ProjectMedia({ project, className = "" }) {
   const shot = project.screenshots?.[0];
 
   if (shot) {
+    const content = (
+      <img
+        src={shot.src}
+        alt={shot.alt}
+        width={shot.w}
+        height={shot.h}
+        loading="lazy"
+        decoding="async"
+        className="h-full w-full object-cover object-top aspect-[16/9] transition-transform duration-700 hover:scale-[1.035]"
+      />
+    );
+
+    if (project.live) {
+      return (
+        <a
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`block overflow-hidden rounded-2xl border border-border/60 bg-surface/40 hover:border-primary/45 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 ${className}`}
+        >
+          {content}
+        </a>
+      );
+    }
+
     return (
       <div className={`overflow-hidden rounded-2xl border border-border/60 bg-surface/40 ${className}`}>
-        <img
-          src={shot.src}
-          alt={shot.alt}
-          width={shot.w}
-          height={shot.h}
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-cover object-top aspect-[16/9] transition-transform duration-700 hover:scale-[1.035]"
-        />
+        {content}
       </div>
     );
   }

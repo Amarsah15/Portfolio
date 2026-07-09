@@ -156,7 +156,14 @@ export const projects = [
           "Persisted per-device session records with metadata and exposed endpoints to identify the current session and revoke others individually or all at once.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/projects/authcore/Screenshot 2026-07-10 010702.png", alt: "AuthCore User Login Interface", w: 1920, h: 1080 },
+      { src: "/projects/authcore/Screenshot 2026-07-10 010711.png", alt: "Email OTP Verification Flow", w: 1920, h: 1080 },
+      { src: "/projects/authcore/Screenshot 2026-07-10 010723.png", alt: "Secure Password Reset Request", w: 1920, h: 1080 },
+      { src: "/projects/authcore/Screenshot 2026-07-10 010852.png", alt: "User Account Settings & Sessions Overview", w: 1920, h: 1080 },
+      { src: "/projects/authcore/Screenshot 2026-07-10 010934.png", alt: "Device Session Management & Security Dashboard", w: 1920, h: 1080 },
+      { src: "/projects/authcore/Screenshot 2026-07-10 010952.png", alt: "Swagger API Documentation & Specifications", w: 1920, h: 1080 },
+    ],
   },
 
   {
@@ -220,7 +227,24 @@ export const projects = [
           "Validated posts on both ends (Zod on the client, express-validator on the server) with length limits, and added rate limiting to the write endpoints.",
       },
     ],
-    screenshots: [],
+    screenshots: [
+      { src: "/projects/connectify/Screenshot 2026-07-10 010300.png", alt: "Connectify Social Portal Home", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010311.png", alt: "Secure Login Page", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010319.png", alt: "Account Registration and Validation Form", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010327.png", alt: "Public Activity Feed and Discussion Boards", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010335.png", alt: "Publish Post Dashboard with Live Character Count", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010342.png", alt: "User Profile View and Bio Details", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010405.png", alt: "User Settings & Profile Configuration Page", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010414.png", alt: "Edit Profile Details Panel", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010419.png", alt: "Profile Avatar Customization Panel", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010429.png", alt: "Active Sessions & Cookie Info", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010435.png", alt: "Interactive Actions and Feed Customization", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010441.png", alt: "Mobile Responsive View of the Activity Feed", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010447.png", alt: "Post Verification & Validation Prompts", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010456.png", alt: "Instant Toast Notifications for Actions", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010508.png", alt: "Security Configurations & Revocations Screen", w: 1920, h: 1080 },
+      { src: "/projects/connectify/Screenshot 2026-07-10 010515.png", alt: "Integrated Developer Analytics Views", w: 1920, h: 1080 },
+    ],
   },
 
   {
