@@ -228,14 +228,7 @@ export default function TechIcon({ name, className = "h-5 w-5" }) {
           <circle cx="18" cy="21" r="2" fill="#ca4245" stroke="none" />
         </svg>
       );
-    case "reacthookform":
-      return (
-        <svg viewBox="0 0 24 24" className={className} fill="none" stroke="#ec5990" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
-          <title>React Hook Form</title>
-          <rect x="4" y="3" width="16" height="18" rx="2" />
-          <path d="M8 8h8M8 12h8M8 16h5" />
-        </svg>
-      );
+
     case "jwt":
       return (
         <svg viewBox="0 0 32 32" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -252,13 +245,7 @@ export default function TechIcon({ name, className = "h-5 w-5" }) {
           <path fillRule="evenodd" clipRule="evenodd" d="M22.2404 11.4243L27.3285 4.4802L23.4244 1.63218L18.3684 8.60823V12.7043L22.2404 11.4243Z" fill="#FF4F40" style={{ fill: "#FF4F40", fillOpacity: 1 }}></path>
         </svg>
       );
-    case "zod":
-      return (
-        <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <title>Zod</title>
-          <path d="M4 5h16l-9 9h9v5H4l9-9H4V5z" fill="#3068b7" />
-        </svg>
-      );
+
     case "restapis":
     case "restapi":
       return (
