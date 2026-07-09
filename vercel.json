@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/leetlab/:path*",
-      "destination": "https://leetlab.vercel.app/:path*"
+      "destination": "https://leet-lab-amarnath-kumar.vercel.app/:path*"
     }
   ]
 }
