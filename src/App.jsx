@@ -1,39 +1,38 @@
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import Portfolio from "./components/Portfolio";
-import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { MotionConfig } from "framer-motion";
+import { ThemeProvider } from "@/context/ThemeContext";
+import RootLayout from "@/layouts/RootLayout";
+import Home from "@/pages/Home";
+import { lazy } from "react";
+
+// Home is the primary entry — load eagerly. Secondary routes are code-split.
+const Projects = lazy(() => import("@/pages/Projects"));
+const Project = lazy(() => import("@/pages/Project"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const Resume = lazy(() => import("@/pages/Resume"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 export default function App() {
-  useEffect(() => {
-    if (window.location.hash) {
-      const id = window.location.hash.substring(1);
-
-      const element = document.getElementById(id);
-
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }, 100);
-      }
-    }
-  }, []);
-
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Portfolio />
-      <Education />
-      <Contact />
-      <Footer />
-    </>
+    <HelmetProvider>
+      <ThemeProvider>
+        {/* reducedMotion="user" makes all Framer Motion respect the OS setting. */}
+        <MotionConfig reducedMotion="user">
+          <BrowserRouter>
+            <Routes>
+              <Route element={<RootLayout />}>
+                <Route index element={<Home />} />
+                <Route path="projects" element={<Projects />} />
+                <Route path="projects/:slug" element={<Project />} />
+                <Route path="resume" element={<Resume />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </MotionConfig>
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
