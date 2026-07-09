@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/leetlab/:path*",
+      "destination": "https://leetlab.vercel.app/:path*"
+    }
+  ]
+}
