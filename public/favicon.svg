@@ -1,4 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="8" fill="#3B82F6"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="18" fill="#F8FAFC">AK</text>
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e1324"/>
+      <stop offset="100%" stop-color="#080b14"/>
+    </linearGradient>
+    
+    <!-- Text/Accent Gradient -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Base -->
+  <rect width="32" height="32" rx="10" fill="url(#bg)"/>
+  <rect x="0.5" y="0.5" width="31" height="31" rx="9.5" stroke="url(#borderGrad)" stroke-width="1"/>
+
+  <!-- Initials Text (AK) -->
+  <text x="16" y="20.5" font-family="'Space Grotesk', 'Inter', system-ui, sans-serif" font-weight="800" font-size="15" fill="url(#accent)" letter-spacing="-0.03em" text-anchor="middle">AK</text>
 </svg>
