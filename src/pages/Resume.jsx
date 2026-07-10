@@ -3,12 +3,37 @@ import { Container, Button, Seo } from "@/components/ui";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function Resume() {
+  const resumeJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/resume/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": siteConfig.url
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Resume",
+            "item": `${siteConfig.url}/resume`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <Seo
         title={`Resume - ${siteConfig.name}`}
         description="View my professional resume, engineering experience, and technical skills directly on my website."
         path="/resume"
+        jsonLd={resumeJsonLd}
       />
 
       <section className="min-h-screen py-24 md:py-28 relative overflow-hidden developer-radial developer-grid">

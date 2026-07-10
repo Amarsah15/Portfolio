@@ -30,15 +30,40 @@ const contactMethods = [
 ];
 
 export default function Contact() {
+  const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/contact/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": siteConfig.url
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": `${siteConfig.url}/contact`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <Seo
         title={`Contact - ${siteConfig.name}`}
         description="Get in touch with Amarnath Kumar. Open to full-time roles, freelance projects, and interesting engineering conversations."
         path="/contact"
+        jsonLd={contactJsonLd}
       />
 
-      <section className="py-24 md:py-32">
+      <section className="py-20 md:py-24">
         <Container>
           <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
             <Heading as="h1" className="mb-4">

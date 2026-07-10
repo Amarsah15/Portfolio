@@ -8,44 +8,62 @@ import Education from "@/components/sections/Education";
 import Contact from "@/components/sections/Contact";
 import { siteConfig } from "@/data/siteConfig";
 
-const personJsonLd = {
+const homeGraphJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  name: siteConfig.name,
-  url: siteConfig.url,
-  jobTitle: siteConfig.title,
-  description: siteConfig.description,
-  email: siteConfig.email,
-  sameAs: [
-    siteConfig.github,
-    siteConfig.linkedin,
-    "https://www.amarnathkumar.dev"
-  ],
-  gender: "Male",
-  alumniOf: {
-    "@type": "CollegeOrUniversity",
-    name: "Brainware University",
-    sameAs: "https://www.brainwareuniversity.ac.in/"
-  },
-  knowsAbout: [
-    "Full-Stack Development",
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JavaScript",
-    "Tailwind CSS",
-    "REST APIs",
-    "Software Engineering",
-    "Git",
-    "Zustand"
-  ],
-  address: {
-    "@type": "PostalAddress",
-    "addressLocality": "Kolkata",
-    "addressRegion": "West Bengal",
-    "addressCountry": "IN"
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteConfig.url}/#person`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      jobTitle: siteConfig.title,
+      description: siteConfig.description,
+      email: siteConfig.email,
+      sameAs: [
+        siteConfig.github,
+        siteConfig.linkedin,
+        "https://www.amarnathkumar.dev",
+        "https://leetlab.amarnathkumar.dev/",
+        "https://authcore.amarnathkumar.dev/",
+        "https://connectify.amarnathkumar.dev/"
+      ],
+      gender: "Male",
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Brainware University",
+        sameAs: "https://www.brainwareuniversity.ac.in/"
+      },
+      knowsAbout: [
+        "Full-Stack Development",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JavaScript",
+        "Tailwind CSS",
+        "REST APIs",
+        "Software Engineering",
+        "Git",
+        "Zustand"
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Kolkata",
+        addressRegion: "West Bengal",
+        addressCountry: "IN"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteConfig.url}/#website`,
+      url: siteConfig.url,
+      name: `${siteConfig.name} - Portfolio`,
+      description: siteConfig.description,
+      publisher: {
+        "@id": `${siteConfig.url}/#person`
+      }
+    }
+  ]
 };
 
 export default function Home() {
@@ -55,7 +73,7 @@ export default function Home() {
         title={`${siteConfig.name} - ${siteConfig.title}`}
         description={siteConfig.description}
         path="/"
-        jsonLd={personJsonLd}
+        jsonLd={homeGraphJsonLd}
       />
 
       <Hero />

@@ -1,8 +1,9 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/leetlab/:path*",
-      "destination": "https://leet-lab-amarnath-kumar.vercel.app/:path*"
+      "source": "/((?!assets/|projects/|favicon|robots\\.txt|sitemap\\.xml|manifest\\.webmanifest|.*\\.).*)",
+      "destination": "/index.html"
     }
   ]
 }

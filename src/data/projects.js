@@ -11,7 +11,7 @@ export const projects = [
     year: "2026",
     category: "Full-Stack Platform",
     github: "https://github.com/Amarsah15/LeetLab",
-    live: "https://leetlab-rho.vercel.app/",
+    live: "https://leetlab.amarnathkumar.dev/",
     stack: [
       "React",
       "Vite",
@@ -115,7 +115,7 @@ export const projects = [
     year: "2026",
     category: "Full-Stack Auth System",
     github: "https://github.com/Amarsah15/AuthCore",
-    live: "https://authcore-amarnath-kumar.vercel.app/",
+    live: "https://authcore.amarnathkumar.dev/",
     stack: ["React", "Vite", "Zustand", "Express", "MongoDB", "JWT", "Zod"],
     fullStack: {
       Frontend: ["React 19", "Vite", "React Router", "Zustand", "Axios", "Tailwind CSS v4"],
@@ -178,7 +178,7 @@ export const projects = [
     year: "2026",
     category: "Full-Stack Social App",
     github: "https://github.com/Amarsah15/Connectify",
-    live: "https://connectify-amarnath-kumar.vercel.app/",
+    live: "https://connectify.amarnathkumar.dev/",
     stack: ["React", "Vite", "Tailwind CSS", "Zustand", "Express", "MongoDB", "JWT"],
     fullStack: {
       Frontend: [

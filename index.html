@@ -3,9 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amarnath Kumar | Full-Stack Developer</title>
+    <meta name="description" content="Amarnath Kumar is a Full-Stack Developer building responsive, scalable web applications across the frontend and backend. Specialized in React, Node.js, Express, and MongoDB." />
+    <meta name="author" content="Amarnath Kumar" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#070708" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+    <!-- Search Engine Verifications & Google Analytics -->
+    <script type="module">
+      import { siteConfig } from '/src/data/siteConfig.js';
+      if (siteConfig.googleSiteVerification) {
+        const meta = document.createElement('meta');
+        meta.name = 'google-site-verification';
+        meta.content = siteConfig.googleSiteVerification;
+        document.head.appendChild(meta);
+      }
+      if (siteConfig.bingSiteVerification) {
+        const meta = document.createElement('meta');
+        meta.name = 'msvalidate.01';
+        meta.content = siteConfig.bingSiteVerification;
+        document.head.appendChild(meta);
+      }
+      if (siteConfig.googleAnalyticsId) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${siteConfig.googleAnalyticsId}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', siteConfig.googleAnalyticsId);
+      }
+    </script>
 
     <script>
       (function () {

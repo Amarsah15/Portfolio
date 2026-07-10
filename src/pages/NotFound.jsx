@@ -14,7 +14,7 @@ export default function NotFound() {
         noindex
       />
 
-      <section className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-24">
+      <section className="flex items-center justify-center min-h-screen py-28 md:py-36">
         <Container>
           <motion.div initial="hidden" animate="visible" className="text-center max-w-lg mx-auto">
             <motion.p variants={fadeIn} className="text-8xl md:text-9xl font-bold text-border mb-4">

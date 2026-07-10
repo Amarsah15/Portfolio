@@ -1,0 +1,23 @@
+{
+  "name": "Amarnath Kumar - Portfolio",
+  "short_name": "Amarnath Portfolio",
+  "description": "Amarnath Kumar is a Full-Stack Developer building responsive, scalable web applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070708",
+  "theme_color": "#070708",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

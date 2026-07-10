@@ -27,4 +27,10 @@ export const siteConfig = {
 
   // Social sharing image.
   ogImage: "/portfolio-preview.png",
+
+  // Analytics & Webmaster Tools
+  googleAnalyticsId: "",
+  googleSiteVerification: "",
+  bingSiteVerification: "",
+  twitterHandle: "",
 };

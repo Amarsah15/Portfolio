@@ -15,15 +15,8 @@ export default function Seo({ title, description, path = "/", image, jsonLd, noi
       <link rel="canonical" href={url} />
       {noindex && <meta name="robots" content="noindex" />}
 
-      {/* Developer / Author info */}
+      {/* Author info */}
       <meta name="author" content={siteConfig.name} />
-      <meta name="developer" content={siteConfig.name} />
-      <meta name="designer" content={siteConfig.name} />
-      <meta name="developer:email" content={siteConfig.email} />
-      <meta name="developer:github" content={siteConfig.github} />
-      <meta name="developer:linkedin" content={siteConfig.linkedin} />
-      <meta name="developer:role" content="Full Stack Developer, Creative Frontend Developer, Creative Backend Developer" />
-      <link rel="author" href={siteConfig.url} />
 
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content={siteConfig.name} />
@@ -31,11 +24,15 @@ export default function Seo({ title, description, path = "/", image, jsonLd, noi
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      {siteConfig.twitterHandle && <meta name="twitter:site" content={siteConfig.twitterHandle} />}
+      {siteConfig.twitterHandle && <meta name="twitter:creator" content={siteConfig.twitterHandle} />}
 
       {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
     </>

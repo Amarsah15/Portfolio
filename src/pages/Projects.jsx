@@ -10,12 +10,37 @@ export default function Projects() {
   const featured = getFeaturedProject();
   const others = getOtherProjects();
 
+  const projectsJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/projects/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": siteConfig.url
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": `${siteConfig.url}/projects`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <Seo
         title={`Projects - ${siteConfig.name}`}
         description="Full-stack platforms, authentication systems, and REST APIs - each project includes a detailed case study."
         path="/projects"
+        jsonLd={projectsJsonLd}
       />
 
       <section className="py-24 md:py-32">

@@ -66,12 +66,41 @@ export default function Project() {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "SoftwareSourceCode",
-    name: project.title,
-    description: project.tagline,
-    codeRepository: project.github,
-    programmingLanguage: project.stack,
-    author: { "@type": "Person", name: siteConfig.name },
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${siteConfig.url}/projects/${project.slug}/#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": siteConfig.url
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": `${siteConfig.url}/projects`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": project.title,
+            "item": `${siteConfig.url}/projects/${project.slug}`
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": `${siteConfig.url}/projects/${project.slug}/#sourcecode`,
+        "name": project.title,
+        "description": project.tagline,
+        "codeRepository": project.github,
+        "programmingLanguage": project.stack,
+        "author": { "@type": "Person", "name": siteConfig.name }
+      }
+    ]
   };
 
   return (
