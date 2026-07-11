@@ -18,8 +18,6 @@ const NotFound = lazy(() => import("@/pages/NotFound"));
 export default function App() {
   return (
     <ThemeProvider>
-      <Analytics />
-      <SpeedInsights />
       {/* reducedMotion="user" makes all Framer Motion respect the OS setting. */}
       <MotionConfig reducedMotion="user">
         <BrowserRouter>
@@ -36,6 +34,8 @@ export default function App() {
           </Routes>
         </BrowserRouter>
       </MotionConfig>
+      <SpeedInsights />
+      <Analytics />
     </ThemeProvider>
   );
 }
