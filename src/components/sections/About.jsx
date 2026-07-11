@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui";
 const highlights = [
   { icon: Code2, value: "5+", label: "Projects shipped" },
   { icon: Layers3, value: "Full-stack", label: "End-to-end thinking" },
-  { icon: Rocket, value: "2026", label: "Ready for my first role" },
+  { icon: Rocket, value: "Immediate", label: "Ready for full-time roles" },
 ];
 
 export default function About() {
