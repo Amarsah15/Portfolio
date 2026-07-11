@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import RootLayout from "@/layouts/RootLayout";
 import Home from "@/pages/Home";
 import { lazy } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Home is the primary entry — load eagerly. Secondary routes are code-split.
 const Projects = lazy(() => import("@/pages/Projects"));
@@ -32,6 +33,7 @@ export default function App() {
           </Routes>
         </BrowserRouter>
       </MotionConfig>
+      <SpeedInsights />
     </ThemeProvider>
   );
 }
