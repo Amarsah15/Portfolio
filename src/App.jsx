@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import RootLayout from "@/layouts/RootLayout";
 import Home from "@/pages/Home";
 import { lazy } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 // Home is the primary entry — load eagerly. Secondary routes are code-split.
 const Projects = lazy(() => import("@/pages/Projects"));
@@ -16,6 +18,8 @@ const NotFound = lazy(() => import("@/pages/NotFound"));
 export default function App() {
   return (
     <ThemeProvider>
+      <Analytics />
+      <SpeedInsights />
       {/* reducedMotion="user" makes all Framer Motion respect the OS setting. */}
       <MotionConfig reducedMotion="user">
         <BrowserRouter>
