@@ -19,7 +19,7 @@ export default function About() {
         <motion.div variants={slideUp} className="relative lg:col-span-7 overflow-hidden rounded-3xl border border-border bg-surface/60 p-6 md:p-9 premium-border">
           <Sparkles className="absolute right-7 top-7 h-7 w-7 text-primary/40" />
           <div className="space-y-5 text-muted leading-relaxed max-w-2xl">
-            <p className="text-lg text-foreground">I&apos;m Amarnath Kumar, a Computer Science graduate specialising in AI &amp; ML, based in Kolkata.</p>
+            <p className="text-lg text-foreground">I&apos;m Amarnath Kumar, a Computer Science graduate specialising in MERN stack development, based in Kolkata.</p>
             <p>I build full-stack products with thoughtful interfaces and dependable APIs. My work includes a coding-practice platform with live execution, secure authentication flows, social products, dashboards, and role-based REST APIs.</p>
             <p>I care about readable code, accessible experiences, and understanding the system behind the screen. Right now, I&apos;m looking for a frontend, backend, or full-stack role where I can learn fast and contribute from day one.</p>
           </div>
@@ -30,7 +30,7 @@ export default function About() {
             <div key={label} className="group flex items-center gap-4 rounded-2xl border border-border bg-background/70 p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary"><Icon className="h-5 w-5" /></div>
               <div><p className="text-xl font-bold text-foreground">{value}</p><p className="text-sm text-muted">{label}</p></div>
-              <span className="ml-auto text-xs font-mono text-muted/40">0{index + 1}</span>
+              <span className="ml-auto text-xs font-mono text-muted/70">0{index + 1}</span>
             </div>
           ))}
         </motion.div>

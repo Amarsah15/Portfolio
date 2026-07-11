@@ -39,7 +39,7 @@ export default function About() {
     <>
       <Seo
         title={`About - ${siteConfig.name}`}
-        description="I'm Amarnath Kumar, a Computer Science graduate specializing in AI & ML, based in Kolkata. I build full-stack products with thoughtful interfaces."
+        description="I'm Amarnath Kumar, a Computer Science graduate specializing in MERN stack development, based in Kolkata. I build full-stack products with thoughtful interfaces."
         path="/about"
         jsonLd={aboutJsonLd}
       />
@@ -62,7 +62,7 @@ export default function About() {
                 <Sparkles className="absolute right-7 top-7 h-7 w-7 text-primary/40" />
                 <div className="space-y-5 text-muted leading-relaxed">
                   <p className="text-lg text-foreground font-medium">
-                    I'm Amarnath Kumar, a Computer Science graduate specializing in AI & ML, based in Kolkata.
+                    I'm Amarnath Kumar, a Computer Science graduate specializing in MERN stack development, based in Kolkata.
                   </p>
                   <p>
                     I build full-stack products with thoughtful interfaces and dependable APIs. My work includes a coding-practice platform with live execution, secure authentication flows, social products, dashboards, and role-based REST APIs.
@@ -83,7 +83,7 @@ export default function About() {
                       <p className="text-xl font-bold text-foreground">{value}</p>
                       <p className="text-sm text-muted">{label}</p>
                     </div>
-                    <span className="ml-auto text-xs font-mono text-muted/40">0{index + 1}</span>
+                    <span className="ml-auto text-xs font-mono text-muted/70">0{index + 1}</span>
                   </div>
                 ))}
               </motion.div>
