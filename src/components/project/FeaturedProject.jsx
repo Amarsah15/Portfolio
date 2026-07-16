@@ -49,6 +49,7 @@ export default function FeaturedProject({ project }) {
                 variant="secondary"
                 size="sm"
                 className="group/btn"
+                aria-label={`Read case study for ${project.title}`}
               >
                 Read Case Study
                 <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-1" />

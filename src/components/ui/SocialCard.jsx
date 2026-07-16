@@ -15,9 +15,9 @@ export default function SocialCard({ icon: Icon, label, value, href, description
             {Icon && <Icon className="h-5 w-5" />}
           </div>
           <div className="min-w-0 flex-1">
-            <h4 className="text-sm font-semibold text-foreground transition-colors duration-200 group-hover:text-primary">
+            <h3 className="text-sm font-semibold text-foreground transition-colors duration-200 group-hover:text-primary">
               {label}
-            </h4>
+            </h3>
             <p className="text-sm text-muted mt-0.5 break-all">{value}</p>
             {description && <p className="text-xs text-muted/60 mt-1">{description}</p>}
           </div>

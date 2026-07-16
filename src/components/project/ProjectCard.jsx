@@ -57,6 +57,7 @@ export default function ProjectCard({ project }) {
               variant="secondary"
               size="sm"
               className="group/btn text-xs font-semibold"
+              aria-label={`Read case study for ${project.title}`}
             >
               Case Study
               <ArrowRight className="ml-1 h-3.5 w-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5" />

@@ -135,11 +135,11 @@ export default function TechIcon({ name, className = "h-5 w-5" }) {
       );
     case "git":
       return (
-        <img src="/git.png" alt="Git" className={className} loading="lazy" decoding="async" />
+        <img src="/git.webp" alt="" aria-hidden="true" className={className} loading="lazy" decoding="async" />
       );
     case "docker":
       return (
-        <img src="/docker.png" alt="Docker" className={className} loading="lazy" decoding="async" />
+        <img src="/docker.webp" alt="" aria-hidden="true" className={className} loading="lazy" decoding="async" />
       );
     case "githubactions":
       return (
@@ -217,7 +217,7 @@ export default function TechIcon({ name, className = "h-5 w-5" }) {
       );
     case "zustand":
       return (
-        <img src="/zustand.png" alt="Zustand" className={className} loading="lazy" decoding="async" />
+        <img src="/zustand.webp" alt="" aria-hidden="true" className={className} loading="lazy" decoding="async" />
       );
     case "reactrouter":
       return (
@@ -249,15 +249,15 @@ export default function TechIcon({ name, className = "h-5 w-5" }) {
     case "restapis":
     case "restapi":
       return (
-        <img src="/restapi.png" alt="REST API" className={`${className} dark:invert`} loading="lazy" decoding="async" />
+        <img src="/restapi.webp" alt="" aria-hidden="true" className={`${className} dark:invert`} loading="lazy" decoding="async" />
       );
     case "vite":
       return (
-        <img src="/vite.png" alt="Vite" className={className} loading="lazy" decoding="async" />
+        <img src="/vite.webp" alt="" aria-hidden="true" className={className} loading="lazy" decoding="async" />
       );
     case "judge0":
       return (
-        <img src="/judge0.png" alt="Judge0" className={className} loading="lazy" decoding="async" />
+        <img src="/judge0.webp" alt="" aria-hidden="true" className={className} loading="lazy" decoding="async" />
       );
     case "gemini":
     case "googlegemini": {
