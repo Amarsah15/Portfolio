@@ -1,12 +1,22 @@
+import { lazy, Suspense } from "react";
 import Seo from "@/components/ui/Seo";
 import Hero from "@/components/sections/Hero";
 import TechMarquee from "@/components/sections/TechMarquee";
-import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import Projects from "@/components/sections/Projects";
-import Education from "@/components/sections/Education";
-import Contact from "@/components/sections/Contact";
 import { siteConfig } from "@/data/siteConfig";
+
+const About = lazy(() => import("@/components/sections/About"));
+const Skills = lazy(() => import("@/components/sections/Skills"));
+const Projects = lazy(() => import("@/components/sections/Projects"));
+const Education = lazy(() => import("@/components/sections/Education"));
+const Contact = lazy(() => import("@/components/sections/Contact"));
+
+function SectionLoader() {
+  return (
+    <div className="flex items-center justify-center min-h-[15vh]" aria-hidden="true">
+      <div className="h-5 w-5 rounded-full border-2 border-primary/20 border-t-transparent animate-spin" />
+    </div>
+  );
+}
 
 const homeGraphJsonLd = {
   "@context": "https://schema.org",
@@ -78,11 +88,21 @@ export default function Home() {
 
       <Hero />
       <TechMarquee />
-      <About />
-      <Skills />
-      <Projects />
-      <Education />
-      <Contact />
+      <Suspense fallback={<SectionLoader />}>
+        <About />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <Skills />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <Education />
+      </Suspense>
+      <Suspense fallback={<SectionLoader />}>
+        <Contact />
+      </Suspense>
     </>
   );
 }
