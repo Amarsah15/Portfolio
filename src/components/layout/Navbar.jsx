@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Menu, X, FileText } from "lucide-react";
 import clsx from "clsx";
 import Container from "@/components/ui/Container";
@@ -155,7 +155,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
+          <m.div
             id="mobile-nav-menu"
             ref={menuRef}
             role="dialog"
@@ -198,7 +198,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </Container>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </header>

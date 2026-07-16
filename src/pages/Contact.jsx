@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { Mail, Github, Linkedin, MapPin, ChevronDown, Clock, MessageSquare } from "lucide-react";
 import { slideUp, staggerContainer } from "@/lib/motion";
 import { Container, Heading, SocialCard, Seo, Card } from "@/components/ui";
@@ -92,22 +92,22 @@ export default function Contact() {
       <section className="py-20 md:py-24 relative overflow-hidden developer-radial developer-grid">
         <div className="pointer-events-none absolute left-[8%] bottom-16 h-56 w-56 rounded-full bg-primary/10 blur-3xl ambient-orb" />
         <Container>
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-16">
+          <m.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-16">
             
             {/* Header */}
             <div>
               <Heading as="h1" className="mb-4">
                 Get in Touch
               </Heading>
-              <motion.p variants={slideUp} className="text-muted text-base md:text-lg max-w-2xl">
+              <m.p variants={slideUp} className="text-muted text-base md:text-lg max-w-2xl">
                 Have a project in mind, want to collaborate, or just want to say hello? I&apos;d love to hear from you.
-              </motion.p>
+              </m.p>
             </div>
 
             {/* Form and Contacts Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
               {/* Form block */}
-              <motion.div
+              <m.div
                 variants={slideUp}
                 className="lg:col-span-3 rounded-2xl border border-border bg-surface/40 p-6 md:p-8 premium-border shadow-sm backdrop-blur-md"
               >
@@ -116,12 +116,12 @@ export default function Contact() {
                   <h2 className="text-lg font-semibold text-foreground">Send a Message</h2>
                 </div>
                 <ContactForm />
-              </motion.div>
+              </m.div>
 
               {/* Info block */}
               <div className="lg:col-span-2 flex flex-col gap-4">
                 {contactMethods.map((method) => (
-                  <motion.div key={method.label} variants={slideUp}>
+                  <m.div key={method.label} variants={slideUp}>
                     <SocialCard
                       icon={method.icon}
                       label={method.label}
@@ -129,11 +129,11 @@ export default function Contact() {
                       href={method.href}
                       description={method.description}
                     />
-                  </motion.div>
+                  </m.div>
                 ))}
 
                 {/* Location */}
-                <motion.div
+                <m.div
                   variants={slideUp}
                   className="flex items-center gap-3 rounded-xl border border-border/60 bg-surface/20 px-4 py-3.5 text-sm text-muted shadow-sm"
                 >
@@ -142,10 +142,10 @@ export default function Contact() {
                     <p className="font-medium text-foreground">Kolkata, India</p>
                     <p className="text-xs text-muted/80">Available for remote & relocation roles</p>
                   </div>
-                </motion.div>
+                </m.div>
 
                 {/* Availability response */}
-                <motion.div
+                <m.div
                   variants={slideUp}
                   className="flex items-center gap-3 rounded-xl border border-border/60 bg-surface/20 px-4 py-3.5 text-sm text-muted shadow-sm"
                 >
@@ -154,12 +154,12 @@ export default function Contact() {
                     <p className="font-medium text-foreground">Typical Response Time</p>
                     <p className="text-xs text-muted/80">Within 24 hours (Email & LinkedIn)</p>
                   </div>
-                </motion.div>
+                </m.div>
               </div>
             </div>
 
             {/* Accordion FAQ Section */}
-            <motion.div variants={slideUp} className="space-y-8 pt-8 border-t border-border/60">
+            <m.div variants={slideUp} className="space-y-8 pt-8 border-t border-border/60">
               <div className="text-center max-w-xl mx-auto space-y-2">
                 <Heading as="h2" className="text-2xl font-bold">
                   Frequently Asked Questions
@@ -184,7 +184,7 @@ export default function Contact() {
                       
                       <AnimatePresence initial={false}>
                         {isOpen && (
-                          <motion.div
+                          <m.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
@@ -193,16 +193,16 @@ export default function Contact() {
                             <div className="p-5 pt-0 border-t border-border/40 text-sm text-muted leading-relaxed">
                               {faq.answer}
                             </div>
-                          </motion.div>
+                          </m.div>
                         )}
                       </AnimatePresence>
                     </Card>
                   );
                 })}
               </div>
-            </motion.div>
+            </m.div>
 
-          </motion.div>
+          </m.div>
         </Container>
       </section>
     </>

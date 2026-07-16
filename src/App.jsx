@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { MotionConfig } from "framer-motion";
+import { MotionConfig, LazyMotion, domAnimation } from "framer-motion";
 import { ThemeProvider } from "@/context/ThemeContext";
 import RootLayout from "@/layouts/RootLayout";
 import Home from "@/pages/Home";
@@ -37,21 +37,23 @@ export default function App() {
   return (
     <ThemeProvider>
       {/* reducedMotion="user" makes all Framer Motion respect the OS setting. */}
-      <MotionConfig reducedMotion="user">
-        <BrowserRouter>
-          <Routes>
-            <Route element={<RootLayout />}>
-              <Route index element={<Home />} />
-              <Route path="projects" element={<Projects />} />
-              <Route path="projects/:slug" element={<Project />} />
-              <Route path="resume" element={<Resume />} />
-              <Route path="contact" element={<Contact />} />
-              <Route path="about" element={<About />} />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </MotionConfig>
+      <LazyMotion features={domAnimation} strict>
+        <MotionConfig reducedMotion="user">
+          <BrowserRouter>
+            <Routes>
+              <Route element={<RootLayout />}>
+                <Route index element={<Home />} />
+                <Route path="projects" element={<Projects />} />
+                <Route path="projects/:slug" element={<Project />} />
+                <Route path="resume" element={<Resume />} />
+                <Route path="contact" element={<Contact />} />
+                <Route path="about" element={<About />} />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </MotionConfig>
+      </LazyMotion>
       <SpeedInsights />
       <Analytics />
     </ThemeProvider>

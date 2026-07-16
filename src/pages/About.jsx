@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { 
   Code2, 
   Layers3, 
@@ -85,20 +85,20 @@ export default function About() {
       <section className="py-20 md:py-24 relative overflow-hidden developer-radial developer-grid">
         <div className="pointer-events-none absolute right-[8%] top-16 h-56 w-56 rounded-full bg-primary/10 blur-3xl ambient-orb" />
         <Container>
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-20">
+          <m.div initial="hidden" animate="visible" variants={staggerContainer} className="space-y-20">
             {/* Header & Stats Highlight */}
             <div className="space-y-8">
               <div>
                 <Heading as="h1" className="mb-4">
                   About Me
                 </Heading>
-                <motion.p variants={slideUp} className="text-muted text-base md:text-lg max-w-2xl">
+                <m.p variants={slideUp} className="text-muted text-base md:text-lg max-w-2xl">
                   Developer by practice. Builder by instinct. I enjoy taking an idea from an empty folder to a useful, polished product.
-                </motion.p>
+                </m.p>
               </div>
 
               <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
-                <motion.div variants={slideUp} className="relative lg:col-span-7 overflow-hidden rounded-3xl border border-border bg-surface/60 p-6 md:p-9 premium-border">
+                <m.div variants={slideUp} className="relative lg:col-span-7 overflow-hidden rounded-3xl border border-border bg-surface/60 p-6 md:p-9 premium-border">
                   <Sparkles className="absolute right-7 top-7 h-7 w-7 text-primary/40" />
                   <div className="space-y-5 text-muted leading-relaxed">
                     <p className="text-lg text-foreground font-medium">
@@ -114,9 +114,9 @@ export default function About() {
                       I care about readable code, accessible experiences, and understanding the systems behind the screen. I am actively looking for frontend, backend, or full-stack engineering roles where I can learn quickly and deliver impact from day one.
                     </p>
                   </div>
-                </motion.div>
+                </m.div>
 
-                <motion.div variants={slideUp} className="grid gap-4 sm:grid-cols-3 lg:col-span-5 lg:grid-cols-1">
+                <m.div variants={slideUp} className="grid gap-4 sm:grid-cols-3 lg:col-span-5 lg:grid-cols-1">
                   {highlights.map(({ icon: Icon, value, label }, index) => (
                     <div key={label} className="group flex items-center gap-4 rounded-2xl border border-border bg-background/70 p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
                       <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -129,7 +129,7 @@ export default function About() {
                       <span className="ml-auto text-xs font-mono text-muted/70">0{index + 1}</span>
                     </div>
                   ))}
-                </motion.div>
+                </m.div>
               </div>
             </div>
 
@@ -191,7 +191,7 @@ export default function About() {
               </Heading>
               <div className="relative border-l border-border/80 ml-4 md:ml-6 pl-6 md:pl-8 space-y-10">
                 {education.map((edu, idx) => (
-                  <motion.div
+                  <m.div
                     key={edu.degree}
                     variants={slideUp}
                     className="relative group"
@@ -216,13 +216,13 @@ export default function About() {
                       <span>·</span>
                       <span className="text-primary font-medium">{edu.score}</span>
                     </div>
-                  </motion.div>
+                  </m.div>
                 ))}
               </div>
             </div>
 
             {/* Navigation CTA */}
-            <motion.div variants={slideUp} className="flex flex-wrap gap-4 pt-4">
+            <m.div variants={slideUp} className="flex flex-wrap gap-4 pt-4">
               <Button to="/projects" variant="primary">
                 View My Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -230,8 +230,8 @@ export default function About() {
               <Button to="/contact" variant="secondary">
                 Get in Touch
               </Button>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </Container>
       </section>
     </>

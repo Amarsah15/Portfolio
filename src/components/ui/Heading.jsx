@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { slideUp } from "@/lib/motion";
 
 export default function Heading({
@@ -10,7 +10,7 @@ export default function Heading({
   ...props
 }) {
   return (
-    <motion.div
+    <m.div
       className={className}
       variants={slideUp}
       {...props}
@@ -26,6 +26,6 @@ export default function Heading({
       >
         {children}
       </Tag>
-    </motion.div>
+    </m.div>
   );
 }

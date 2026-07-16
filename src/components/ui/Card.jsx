@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import clsx from "clsx";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { liftOnHover } from "@/lib/motion";
 
 export default function Card({
@@ -10,7 +10,7 @@ export default function Card({
   as = "div",
   ...props
 }) {
-  const Component = hover ? motion.div : as;
+  const Component = hover ? m.div : as;
   const motionProps = hover
     ? { initial: "rest", whileHover: "hover", variants: liftOnHover }
     : {};

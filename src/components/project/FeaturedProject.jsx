@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, Github, ExternalLink } from "lucide-react";
 import { slideUp } from "@/lib/motion";
 import Button from "@/components/ui/Button";
@@ -9,7 +9,7 @@ import ProjectMedia from "./ProjectMedia";
 
 export default function FeaturedProject({ project }) {
   return (
-    <motion.div variants={slideUp}>
+    <m.div variants={slideUp}>
       <div className="group rounded-3xl border border-border bg-surface/50 p-6 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:bg-surface/70 hover:shadow-2xl hover:shadow-primary/5 premium-border overflow-hidden">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -93,6 +93,6 @@ export default function FeaturedProject({ project }) {
         </div>
 
       </div>
-    </motion.div>
+    </m.div>
   );
 }

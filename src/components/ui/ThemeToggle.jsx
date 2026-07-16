@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 
@@ -17,7 +17,7 @@ export default function ThemeToggle({ className }) {
       }
     >
       <AnimatePresence mode="wait" initial={false}>
-        <motion.span
+        <m.span
           key={theme}
           initial={{ opacity: 0, rotate: -90, scale: 0.6 }}
           animate={{ opacity: 1, rotate: 0, scale: 1 }}
@@ -26,7 +26,7 @@ export default function ThemeToggle({ className }) {
           className="inline-flex"
         >
           {isDark ? <Moon className="h-[18px] w-[18px]" /> : <Sun className="h-[18px] w-[18px]" />}
-        </motion.span>
+        </m.span>
       </AnimatePresence>
     </button>
   );

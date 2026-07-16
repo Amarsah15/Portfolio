@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Section, SectionHeader, TechIcon } from "@/components/ui";
 import { slideUp } from "@/lib/motion";
 import { skillCategories } from "@/data/skills";
@@ -33,7 +33,7 @@ export default function Skills() {
       <SectionHeader eyebrow="My toolkit" title="Tools are temporary. Fundamentals stay." description="A focused stack I use to move from rough idea to dependable product." />
       <div className="grid gap-4 md:grid-cols-5">
         {skillCategories.map((group, index) => (
-          <motion.article key={group.category} variants={slideUp} className={`${spans[index]} group relative min-h-48 overflow-hidden rounded-3xl border border-border bg-background/75 p-6 premium-border transition-all hover:-translate-y-1 hover:border-primary/30`}>
+          <m.article key={group.category} variants={slideUp} className={`${spans[index]} group relative min-h-48 overflow-hidden rounded-3xl border border-border bg-background/75 p-6 premium-border transition-all hover:-translate-y-1 hover:border-primary/30`}>
             <group.icon className="absolute -bottom-5 -right-4 h-32 w-32 text-primary/[.055] transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110" />
             <div className="relative z-10 mb-7 flex items-center gap-3"><span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"><group.icon className="h-4 w-4"/></span><h3 className="font-black tracking-tight text-foreground">{group.category}</h3><span className="ml-auto font-mono text-xs text-muted/70">0{index + 1}</span></div>
             <div className="relative z-10 flex flex-wrap gap-2">
@@ -67,7 +67,7 @@ export default function Skills() {
                 );
               })}
             </div>
-          </motion.article>
+          </m.article>
         ))}
       </div>
     </Section>

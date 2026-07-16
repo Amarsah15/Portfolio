@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { staggerContainer } from "@/lib/motion";
 import { sectionSpacing } from "@/lib/layoutTokens";
 import Container from "./Container";
@@ -14,7 +14,7 @@ export default function Section({
   ...props
 }) {
   return (
-    <motion.section
+    <m.section
       id={id}
       className={clsx(sectionSpacing, "section-shell", className)}
       initial="hidden"
@@ -28,6 +28,6 @@ export default function Section({
       ) : (
         children
       )}
-    </motion.section>
+    </m.section>
   );
 }

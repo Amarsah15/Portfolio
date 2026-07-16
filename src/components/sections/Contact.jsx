@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Mail, Github, Linkedin, MapPin } from "lucide-react";
 import { slideUp } from "@/lib/motion";
 import { Section, SectionHeader, SocialCard } from "@/components/ui";
@@ -38,13 +38,13 @@ export default function Contact() {
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-        <motion.div variants={slideUp} className="lg:col-span-3 rounded-2xl border border-border bg-surface/40 p-6 md:p-8 pb-5 md:pb-6 premium-border">
+        <m.div variants={slideUp} className="lg:col-span-3 rounded-2xl border border-border bg-surface/40 p-6 md:p-8 pb-5 md:pb-6 premium-border">
           <ContactForm />
-        </motion.div>
+        </m.div>
 
         <div className="lg:col-span-2 flex flex-col gap-4">
           {contactMethods.map((method) => (
-            <motion.div key={method.label} variants={slideUp}>
+            <m.div key={method.label} variants={slideUp}>
               <SocialCard
                 icon={method.icon}
                 label={method.label}
@@ -52,16 +52,16 @@ export default function Contact() {
                 href={method.href}
                 description={method.description}
               />
-            </motion.div>
+            </m.div>
           ))}
 
-          <motion.div
+          <m.div
             variants={slideUp}
             className="flex items-center gap-2 rounded-xl border border-border/60 bg-surface/20 px-4 py-3 text-sm text-muted"
           >
             <MapPin className="h-4 w-4 text-primary shrink-0" />
             Open for Work in {siteConfig.location}
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </Section>

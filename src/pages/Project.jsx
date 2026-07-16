@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import {
   ArrowLeft,
   Github,
@@ -40,7 +40,7 @@ function SectionTitle({ icon: Icon, children }) {
 
 function ListSection({ title, icon, items }) {
   return (
-    <motion.div variants={slideUp} className="mb-8">
+    <m.div variants={slideUp} className="mb-8">
       <SectionCard>
         <SectionTitle icon={icon}>{title}</SectionTitle>
         <div className="flex flex-col gap-4 max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ function ListSection({ title, icon, items }) {
           ))}
         </div>
       </SectionCard>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -119,18 +119,18 @@ export default function Project() {
         <div className="pointer-events-none absolute right-[5%] bottom-40 h-48 w-48 rounded-full bg-cyan-400/8 blur-[70px]" />
 
         <Container>
-          <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+          <m.div initial="hidden" animate="visible" variants={staggerContainer}>
 
             {/* Back button */}
-            <motion.div variants={slideUp} className="mb-8">
+            <m.div variants={slideUp} className="mb-8">
               <Button to="/projects" variant="secondary" size="sm">
                 <ArrowLeft className="h-4 w-4" />
                 Back to Projects
               </Button>
-            </motion.div>
+            </m.div>
 
             {/* ── Hero Card ── */}
-            <motion.div variants={slideUp} className="mb-8">
+            <m.div variants={slideUp} className="mb-8">
               <div className="rounded-3xl border border-border bg-background/80 shadow-2xl shadow-primary/8 backdrop-blur-sm overflow-hidden premium-border">
                 {/* Top gradient bar */}
                 <div className="h-1 w-full bg-gradient-to-r from-violet-500 via-cyan-400 to-primary" />
@@ -187,28 +187,28 @@ export default function Project() {
                   )}
                 </div>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* ── Screenshots ── */}
             {project.screenshots?.length > 0 && (
-              <motion.div variants={slideUp} className="mb-8">
+              <m.div variants={slideUp} className="mb-8">
                 <SectionCard>
                   <SectionTitle icon={Images} centered>Screenshots</SectionTitle>
                   <ScreenshotGallery screenshots={project.screenshots} />
                 </SectionCard>
-              </motion.div>
+              </m.div>
             )}
 
             {/* ── Overview ── */}
-            <motion.div variants={slideUp} className="mb-8">
+            <m.div variants={slideUp} className="mb-8">
               <SectionCard>
                 <SectionTitle icon={BookOpen} centered>Overview</SectionTitle>
                 <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">{project.overview}</p>
               </SectionCard>
-            </motion.div>
+            </m.div>
 
             {/* ── Problem ── */}
-            <motion.div variants={slideUp} className="mb-8">
+            <m.div variants={slideUp} className="mb-8">
               <div className="rounded-2xl border border-amber-500/25 bg-amber-500/5 backdrop-blur-sm p-6 md:p-8">
                 <div className="flex items-center justify-center gap-2 mb-4">
                   <AlertTriangle className="h-5 w-5 text-amber-400" />
@@ -216,10 +216,10 @@ export default function Project() {
                 </div>
                 <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-2xl mx-auto text-center">{project.problem}</p>
               </div>
-            </motion.div>
+            </m.div>
 
             {/* ── Architecture ── */}
-            <motion.div variants={slideUp} className="mb-8">
+            <m.div variants={slideUp} className="mb-8">
               <SectionCard>
                 <SectionTitle icon={Layers}>Architecture & Technical Decisions</SectionTitle>
                 <p className="text-base md:text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto text-center mb-8">{project.architecture}</p>
@@ -241,13 +241,13 @@ export default function Project() {
                   </div>
                 )}
               </SectionCard>
-            </motion.div>
+            </m.div>
 
             {/* ── Key Features ── */}
             <ListSection title="Key Features" icon={CheckCircle2} items={project.features} />
 
             {/* ── Challenges ── */}
-            <motion.div variants={slideUp} className="mb-8">
+            <m.div variants={slideUp} className="mb-8">
               <SectionCard>
                 <SectionTitle icon={Zap}>Challenges & Solutions</SectionTitle>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -265,10 +265,10 @@ export default function Project() {
                   ))}
                 </div>
               </SectionCard>
-            </motion.div>
+            </m.div>
 
             {/* ── Bottom CTA ── */}
-            <motion.div
+            <m.div
               variants={slideUp}
               className="rounded-3xl border border-border bg-surface/50 p-10 md:p-16 text-center overflow-hidden relative"
             >
@@ -290,9 +290,9 @@ export default function Project() {
                   Let&apos;s Talk
                 </Button>
               </div>
-            </motion.div>
+            </m.div>
 
-          </motion.div>
+          </m.div>
         </Container>
       </section>
     </>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight, Github } from "lucide-react";
 import { slideUp } from "@/lib/motion";
 import Badge from "@/components/ui/Badge";
@@ -9,7 +9,7 @@ import Button from "@/components/ui/Button";
 
 export default function ProjectCard({ project }) {
   return (
-    <motion.article variants={slideUp}>
+    <m.article variants={slideUp}>
       <div className="group rounded-2xl border border-border bg-surface/45 p-5 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/30 hover:bg-surface/70 hover:shadow-2xl hover:shadow-primary/5 premium-border flex flex-col justify-between h-full">
         <div>
           
@@ -79,6 +79,6 @@ export default function ProjectCard({ project }) {
         </div>
 
       </div>
-    </motion.article>
+    </m.article>
   );
 }

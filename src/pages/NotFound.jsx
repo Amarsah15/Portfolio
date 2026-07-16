@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { Home } from "lucide-react";
 import { fadeIn, slideUp } from "@/lib/motion";
 import { Container, Button, Seo } from "@/components/ui";
@@ -16,20 +16,20 @@ export default function NotFound() {
 
       <section className="flex items-center justify-center min-h-screen py-28 md:py-36">
         <Container>
-          <motion.div initial="hidden" animate="visible" className="text-center max-w-lg mx-auto">
-            <motion.p variants={fadeIn} className="text-8xl md:text-9xl font-bold text-border mb-4">
+          <m.div initial="hidden" animate="visible" className="text-center max-w-lg mx-auto">
+            <m.p variants={fadeIn} className="text-8xl md:text-9xl font-bold text-border mb-4">
               404
-            </motion.p>
+            </m.p>
 
-            <motion.h1 variants={slideUp} className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
+            <m.h1 variants={slideUp} className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
               Page not found
-            </motion.h1>
+            </m.h1>
 
-            <motion.p variants={slideUp} className="text-muted mb-8">
+            <m.p variants={slideUp} className="text-muted mb-8">
               The page you&apos;re looking for doesn&apos;t exist or has been moved.
-            </motion.p>
+            </m.p>
 
-            <motion.div variants={slideUp} className="flex flex-wrap items-center justify-center gap-3">
+            <m.div variants={slideUp} className="flex flex-wrap items-center justify-center gap-3">
               <Button to="/" size="lg">
                 <Home className="h-4 w-4" />
                 Go Home
@@ -37,8 +37,8 @@ export default function NotFound() {
               <Button to="/projects" variant="secondary" size="lg">
                 View Projects
               </Button>
-            </motion.div>
-          </motion.div>
+            </m.div>
+          </m.div>
         </Container>
       </section>
     </>

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, m } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { useScrollToTop } from "@/hooks/useScrollToTop";
@@ -23,7 +23,7 @@ export default function RootLayout() {
       <main className="flex-1">
         <Suspense fallback={<PageLoader />}>
           <AnimatePresence mode="wait" initial={false}>
-            <motion.div
+            <m.div
               key={location.pathname}
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export default function RootLayout() {
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
               <Outlet />
-            </motion.div>
+            </m.div>
           </AnimatePresence>
         </Suspense>
       </main>

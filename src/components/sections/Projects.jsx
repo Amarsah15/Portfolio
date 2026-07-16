@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { slideUp } from "@/lib/motion";
 import { Section, SectionHeader, Button } from "@/components/ui";
@@ -28,12 +28,12 @@ export default function Projects() {
         ))}
       </div>
 
-      <motion.div variants={slideUp} className="text-center">
+      <m.div variants={slideUp} className="text-center">
         <Button to="/projects" variant="secondary" size="lg" className="premium-border">
           View All Projects
           <ArrowRight className="h-4 w-4" />
         </Button>
-      </motion.div>
+      </m.div>
     </Section>
   );
 }
