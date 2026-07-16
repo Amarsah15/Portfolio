@@ -1,0 +1,25 @@
+# Amarnath Kumar - Portfolio
+
+Professional portfolio of Amarnath Kumar, a Full-Stack Developer specializing in building responsive, scalable web applications across the frontend and backend.
+
+## Navigation Links
+
+- [Home](https://amarnathkumar.dev/) - Main page displaying featured projects, toolkit, and contact.
+- [About](https://amarnathkumar.dev/about) - Personal background, skills, and professional highlights.
+- [Projects](https://amarnathkumar.dev/projects) - Comprehensive list of personal projects.
+- [Contact](https://amarnathkumar.dev/contact) - Get in touch or connect via professional socials.
+- [Resume](https://amarnathkumar.dev/resume) - View or download PDF resume.
+
+## Key Projects
+
+- [LeetLab](https://amarnathkumar.dev/projects/leetlab) - Monaco-based coding platform with real-time execution via Judge0 and Gemini AI.
+- [AuthCore](https://amarnathkumar.dev/projects/authcore) - Secure authentication system with JWT, cookies, and rate limiting.
+- [Connectify](https://amarnathkumar.dev/projects/connectify) - A social networking product.
+- [Finance Dashboard API](https://amarnathkumar.dev/projects/finance-dashboard-api) - Backend API for a financial tracking dashboard.
+- [SHE Foundation](https://amarnathkumar.dev/projects/she-foundation) - Internal platform for donor matching and rewards.
+
+## Tech Stack & Skills
+
+- **Frontend**: React, React Router, Vite, Tailwind CSS, Zustand, Framer Motion
+- **Backend**: Node.js, Express, MongoDB, MySQL, REST APIs, JWT, Swagger
+- **Tools & DevOps**: Docker, Postman, VS Code, Git, GitHub, Vercel, Render

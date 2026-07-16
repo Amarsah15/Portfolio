@@ -16,35 +16,6 @@
     <meta name="theme-color" content="#070708" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 
-    <!-- Search Engine Verifications & Google Analytics -->
-    <script type="module">
-      import { siteConfig } from '/src/data/siteConfig.js';
-      if (siteConfig.googleSiteVerification) {
-        const meta = document.createElement('meta');
-        meta.name = 'google-site-verification';
-        meta.content = siteConfig.googleSiteVerification;
-        document.head.appendChild(meta);
-      }
-      if (siteConfig.bingSiteVerification) {
-        const meta = document.createElement('meta');
-        meta.name = 'msvalidate.01';
-        meta.content = siteConfig.bingSiteVerification;
-        document.head.appendChild(meta);
-      }
-      if (siteConfig.googleAnalyticsId) {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${siteConfig.googleAnalyticsId}`;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', siteConfig.googleAnalyticsId);
-      }
-    </script>
-
     <script>
       (function () {
         try {
@@ -60,9 +31,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-      rel="stylesheet"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>

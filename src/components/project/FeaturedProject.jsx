@@ -86,7 +86,7 @@ export default function FeaturedProject({ project }) {
 
           {/* Media Column */}
           <div className="lg:col-span-5 w-full min-w-0">
-            <ProjectMedia project={project} />
+            <ProjectMedia project={project} priority={true} />
           </div>
 
         </div>

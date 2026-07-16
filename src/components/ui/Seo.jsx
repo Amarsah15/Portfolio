@@ -13,6 +13,12 @@ export default function Seo({ title, description, path = "/", image, jsonLd, noi
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      {siteConfig.googleSiteVerification && (
+        <meta name="google-site-verification" content={siteConfig.googleSiteVerification} />
+      )}
+      {siteConfig.bingSiteVerification && (
+        <meta name="msvalidate.01" content={siteConfig.bingSiteVerification} />
+      )}
       {noindex && <meta name="robots" content="noindex" />}
 
       {/* Author info */}

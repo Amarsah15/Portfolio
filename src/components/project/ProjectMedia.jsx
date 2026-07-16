@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
  * screenshots (not yet taken, or an API-only project with no UI), falls back
  * to an honest placeholder — never a simulated/fabricated UI.
  */
-export default function ProjectMedia({ project, className = "" }) {
+export default function ProjectMedia({ project, className = "", priority = false }) {
   const shot = project.screenshots?.[0];
 
   if (shot) {
@@ -16,7 +16,8 @@ export default function ProjectMedia({ project, className = "" }) {
         alt={shot.alt}
         width={shot.w}
         height={shot.h}
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchpriority={priority ? "high" : "auto"}
         decoding="async"
         className="h-full w-full object-cover object-top aspect-[16/9] transition-transform duration-700 hover:scale-[1.035]"
       />
